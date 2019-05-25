@@ -1,0 +1,58 @@
+'''
+元组的使用
+'''
+
+#定义元组
+t = ('张树林','28','山东')
+print(t)
+
+#通过下标获得元组中的元素
+#遍历元组中的值
+
+#重新引用新的元组时原来的元组将被垃圾回收
+t = ('王大锤',20,'四川')
+print(t)
+#元组列表相互转换
+person = list(t)
+x = tuple(person)
+print(person)
+print(x)
+
+
+'''
+集合的使用
+'''
+#集合的建立
+set1 = {1,2,3,3,3,3,2}
+print(set1)
+#长度求法：len
+#增加元素
+set1.add(4)
+set1.update([11,12])
+print(set1)#{1, 2, 3, 4, 11, 12}
+#将元组转换成集合
+set3 = set(('a','b','b',55,9,8,95,65,64,42))
+print(set3.pop())#随机移除一个元素 是否随机 保持怀疑
+print(set3)
+#交 并 差 对称差：& | - ^
+#判断子集和超集  <=   >=
+
+
+'''
+字典的使用
+'''
+scores = {'白元房':78,'狄仁杰':8}
+#通过key可以获得字典对应的值
+print(scores['白元房'])
+#对字典进行遍历,遍历的其实是键
+for elem in scores:
+    print('%s\t----->\t%d'%(elem,scores[elem]))
+#更新字典中的值
+scores['白元房'] = 90
+#增加字典中的值
+scores.update({"冷面":78,"方启鹤":85})
+print(scores.get('武则天',60))
+print(scores)
+#删除字典中的元素
+scores.pop('冷面',78)
+print(scores)
