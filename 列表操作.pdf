@@ -1,0 +1,44 @@
+list1 = [1,3,5,7,100,3]
+print(list1)
+#生成同一个元素的列表
+list2 = ['hello']*5
+print(list2)
+
+#len 计算长度
+#下标（索引）计算
+
+#更改元素
+list1[2] = 200
+#添加元素
+list1.append(200)#在末尾增加列表
+list1.insert(1,400)#在指定位置增加列表
+list1 = list1+[1000,2000]#在末尾增加列表
+print(list1)
+#删除元素
+list1.remove(3)#删除第一个3
+'''删除所有特定元素'''
+if 200 in list1:
+    list1.remove(200)
+del list1[0]#删除指定位置
+list1.clear()#清空列表元素
+
+fruits = ['grape','apple','strwberry','waxberry']
+for fruit in fruits:
+    print(fruit.title())#title将首字母大写
+#排序
+#不会修改原来的列表
+list1 = ['orange','apple','zoo','internationlization','blueberry']
+list2 = sorted(list1)#字符串从小到大
+list3 = sorted(list1,reverse = True)#字符串从大到小
+list4 = sorted(list1,key = len)#根据key的关键字指定排序
+
+#可以修改原来的列表
+list1.sort(reverse = True)# list1: ['zoo', 'orange', 'internationlization', 'blueberry', 'apple']
+print(list1)
+
+#用列表的生成式语法来创建列表
+f = [x for x in range(1,10)]#[1, 2, 3, 4, 5, 6, 7, 8, 9]
+f1 = [x+y for x in 'AB' for y in '123']#['A1', 'A2', 'A3', 'B1', 'B2', 'B3']
+#用列表的生成表达式语法创建列表容器
+#用这种语法创建列表之后元素已经准备就绪所以需要耗费较多的内存空间
+f2 = [x**2 for x in range(1,1000)]
