@@ -1,0 +1,28 @@
+'''
+property装饰器
+在这之后可以直接调用 对象.xx获得属性
+@property
+def xx(slef):
+    return self._xx
+
+此操作之后可以直接调用 ：对象.xx = yy来修改属性
+@xx.setter
+def xx(self,xx)
+    self._xx = xx
+    
+'''
+
+'''
+通过__slots__魔法可以限定Person对象只能绑定__name,__age,__gemder属性
+ps:对于子类不起任何作用
+__slots__ = ('__name','__age','__gender')
+'''
+
+'''
+静态方法：
+@staticmethod:通过给类发消息来调用的
+
+类方法：
+@classmethod #通过类方法创建对象并获取系统时间
+
+'''
